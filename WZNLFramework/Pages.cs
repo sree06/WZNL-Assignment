@@ -8,15 +8,24 @@ namespace WZNLFramework
 {
     public static class Pages
     {
-        public static class HomePage
+        public static HomePage HomePage
         {
-            static string url="http://www.westpac.co.nz";
-
-            public static void Goto()
+            get
             {
-                Browser.Goto(url);
-                throw new NotImplementedException();
+                var home = new HomePage();
+                return home; 
             }
         }
+
+        public static WidgetClass WidgetClass
+        {
+            get
+            {
+                var widget = new WidgetClass();
+                return widget;
+            }
+
+        }
     }
+    
 }

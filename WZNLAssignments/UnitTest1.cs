@@ -12,6 +12,15 @@ namespace WZNLAssignments
         {
             Pages.HomePage.Goto();
 
+            Pages.HomePage.NavigateToKiwiCalculator();
+            
+            Pages.WidgetClass.ClickOnInformationicon();
+
+        }
+        [TestCleanup]
+        public void CloseBrowser()
+        {
+            Browser.CloseBrowser();
         }
     }
 }
