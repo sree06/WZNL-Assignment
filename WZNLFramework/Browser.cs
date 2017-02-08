@@ -10,9 +10,10 @@ namespace WZNLFramework
     public static class Browser
     {
         public static IWebDriver webDriver;
+        public static string driverlocation;
         public static void LaunchFirefox()
         {
-            FirefoxDriverService drService = FirefoxDriverService.CreateDefaultService(@"C:\Users\PersonalPC\Documents\Visual Studio 2015\Projects\WZNLAssignments\Drivers");
+            FirefoxDriverService drService = FirefoxDriverService.CreateDefaultService(driverlocation);
             webDriver = new FirefoxDriver(drService);
          
         }

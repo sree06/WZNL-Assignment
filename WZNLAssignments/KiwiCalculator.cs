@@ -10,12 +10,14 @@ namespace WZNLAssignments.Tests
     {
         public static string url;
         public static string xmlPath;
+        public static string driverlocation;
         
         [TestInitialize]
         public void TestInitialize()
         {
             url= ConfigurationManager.AppSettings["portalurl"].ToString();
             xmlPath = ConfigurationManager.AppSettings["testdataxml"].ToString();
+            Browser.driverlocation = ConfigurationManager.AppSettings["driverlocation"].ToString();
                        
         }
         [TestMethod, Description("The below test to to click on the information icon for the Age of the user")]
