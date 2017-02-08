@@ -12,7 +12,9 @@ namespace WZNLFramework
     public class WidgetClass
     {
         WebDriverWait wait;
-
+        /// <summary>
+        /// Method to access the information icon for the Current Age of the user.
+        /// </summary>
         public void ClickOnInformationIcon()
         {
             var btnCurrentAge = wait.Until(d =>
@@ -22,6 +24,10 @@ namespace WZNLFramework
             btnCurrentAge.Click();
         }
 
+        /// <summary>
+        /// Method to verify if the Retirement Projects are enabled or not.
+        /// </summary>
+        /// <returns></returns>
         public bool validateProjectionEnabled()
         {
             var btnProjection = Browser.webDriver.FindElement(By.CssSelector("button[ng-click='ctrl.showResultsPanel()']"));
