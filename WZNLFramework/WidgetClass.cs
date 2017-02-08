@@ -16,9 +16,10 @@ namespace WZNLFramework
         /// </summary>
         public void ClickOnInformationIcon()
         {
+            wait = new WebDriverWait(Browser.webDriver, TimeSpan.FromSeconds(10));
             var btnCurrentAge = wait.Until(d =>
             {
-                return Browser.webDriver.FindElement(By.XPath("//div//label[contains(text(),'Current age')]/ancestor::div[@class='field-row']//i/parent::button"));
+               return Browser.webDriver.FindElement(By.XPath("//div//label[contains(text(),'Current age')]/ancestor::div[@class='field-row']//i"));
             });
             btnCurrentAge.Click();
         }
