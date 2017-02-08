@@ -10,14 +10,13 @@ namespace WZNLAssignments.Tests
     {
         public static string url;
         public static string xmlPath;
-        public static string browserType;
+        
         [TestInitialize]
         public void TestInitialize()
         {
             url= ConfigurationManager.AppSettings["portalurl"].ToString();
             xmlPath = ConfigurationManager.AppSettings["testdataxml"].ToString();
-            browserType= ConfigurationManager.AppSettings["browser"].ToString();
-            
+                       
         }
         [TestMethod, Description("The below test to to click on the information icon for the Age of the user")]
         public void Validate_information_Age()
