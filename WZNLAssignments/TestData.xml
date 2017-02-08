@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Testdata>
+  <!--Test data for Self Employed user.-->
+  <selfemployed>
+    <age>45</age>
+    <employeestatus>self-employed</employeestatus>
+    <annualincome></annualincome>
+    <PrescribedInvestorRate>17.5</PrescribedInvestorRate>
+    <currentBalance>100000</currentBalance>
+    <voluntaryfund>90</voluntaryfund>
+    <frequency>fortnight</frequency>
+    <RiskProfile>high</RiskProfile>
+    <SavingsPostRetd>290,000</SavingsPostRetd>
+  </selfemployed>
+  <!--Test data for Employed user.-->
+  <employed>
+    <age>30</age>
+    <employeestatus>employed</employeestatus>
+    <annualincome>82,000</annualincome>
+    <kiwisavercontribution>4</kiwisavercontribution>
+    <PrescribedInvestorRate>17.5</PrescribedInvestorRate>
+    <currentBalance></currentBalance>
+    <voluntaryfund></voluntaryfund>
+    <frequency></frequency>
+    <RiskProfile>high</RiskProfile>
+    <SavingsPostRetd></SavingsPostRetd>
+  </employed>
+  <!--Test data for Not Employed user.-->
+  <notemployed>
+    <age>55</age>
+    <employeestatus>not-employed</employeestatus>
+    <annualincome></annualincome>
+    <kiwisavercontribution></kiwisavercontribution>
+    <PrescribedInvestorRate>10.5</PrescribedInvestorRate>
+    <currentBalance>140000</currentBalance>
+    <voluntaryfund>10</voluntaryfund>
+    <frequency>year</frequency>
+    <RiskProfile>medium</RiskProfile>
+    <SavingsPostRetd>200,000</SavingsPostRetd>
+  </notemployed>
+</Testdata>

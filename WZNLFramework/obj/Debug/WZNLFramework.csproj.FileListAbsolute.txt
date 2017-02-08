@@ -1,9 +1,9 @@
-c:\users\personalpc\documents\visual studio 2015\Projects\WZNLAssignments\WZNLFramework\bin\Debug\WZNLFramework.dll
-c:\users\personalpc\documents\visual studio 2015\Projects\WZNLAssignments\WZNLFramework\bin\Debug\WZNLFramework.pdb
-c:\users\personalpc\documents\visual studio 2015\Projects\WZNLAssignments\WZNLFramework\bin\Debug\WebDriver.dll
-c:\users\personalpc\documents\visual studio 2015\Projects\WZNLAssignments\WZNLFramework\bin\Debug\WebDriver.Support.dll
-c:\users\personalpc\documents\visual studio 2015\Projects\WZNLAssignments\WZNLFramework\bin\Debug\WebDriver.xml
-c:\users\personalpc\documents\visual studio 2015\Projects\WZNLAssignments\WZNLFramework\bin\Debug\WebDriver.Support.xml
-c:\users\personalpc\documents\visual studio 2015\Projects\WZNLAssignments\WZNLFramework\obj\Debug\WZNLFramework.dll
-c:\users\personalpc\documents\visual studio 2015\Projects\WZNLAssignments\WZNLFramework\obj\Debug\WZNLFramework.pdb
+C:\Users\PersonalPC\documents\visual studio 2015\Projects\WZNLAssignments\WZNLFramework\bin\Debug\WZNLFramework.dll
+C:\Users\PersonalPC\documents\visual studio 2015\Projects\WZNLAssignments\WZNLFramework\bin\Debug\WZNLFramework.pdb
+C:\Users\PersonalPC\documents\visual studio 2015\Projects\WZNLAssignments\WZNLFramework\bin\Debug\WebDriver.dll
+C:\Users\PersonalPC\documents\visual studio 2015\Projects\WZNLAssignments\WZNLFramework\bin\Debug\WebDriver.Support.dll
+C:\Users\PersonalPC\documents\visual studio 2015\Projects\WZNLAssignments\WZNLFramework\bin\Debug\WebDriver.xml
+C:\Users\PersonalPC\documents\visual studio 2015\Projects\WZNLAssignments\WZNLFramework\bin\Debug\WebDriver.Support.xml
+C:\Users\PersonalPC\documents\visual studio 2015\Projects\WZNLAssignments\WZNLFramework\obj\Debug\WZNLFramework.dll
+C:\Users\PersonalPC\documents\visual studio 2015\Projects\WZNLAssignments\WZNLFramework\obj\Debug\WZNLFramework.pdb
 C:\Users\PersonalPC\documents\visual studio 2015\Projects\WZNLAssignments\WZNLFramework\obj\Debug\WZNLFramework.csprojResolveAssemblyReference.cache

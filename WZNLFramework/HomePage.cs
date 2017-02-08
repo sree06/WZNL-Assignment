@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 
@@ -11,8 +7,7 @@ namespace WZNLFramework
     public class HomePage
     {
         WebDriverWait wait;
-        static string url = "http://www.westpac.co.nz";
-
+        
         public void NavigateToKiwiCalculator()
         {
           
@@ -29,7 +24,7 @@ namespace WZNLFramework
           
         }
 
-        public void Goto()
+        public void Goto(string url)
         {
             Browser.LaunchFirefox();
             Browser.Goto(url);
