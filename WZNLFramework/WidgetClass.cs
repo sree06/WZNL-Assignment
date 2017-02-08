@@ -15,27 +15,11 @@ namespace WZNLFramework
 
         public void ClickOnInformationIcon()
         {
-            wait = new WebDriverWait(Browser.webDriver, TimeSpan.FromSeconds(10));
-            var embeddedCalculator = wait.Until(d =>
-              {
-                  return Browser.webDriver.FindElement(By.Id("calculator-embed"));
-
-              });
-            var frameSource = wait.Until(d =>
+            var btnCurrentAge = wait.Until(d =>
             {
-                return embeddedCalculator.FindElement(By.TagName("iframe"));
-
+                return Browser.webDriver.FindElement(By.XPath("//div//label[contains(text(),'Current age')]/ancestor::div[@class='field-row']//i/parent::button"));
             });
-
-            Browser.webDriver.SwitchTo().Frame(frameSource);
-            var divCurrentAge = wait.Until(d =>
-            {
-                return Browser.webDriver.FindElement(By.ClassName("wpnib-field-current-age"));
-            });
-
-            var btnCurrentAge = divCurrentAge.FindElement(By.ClassName("button[tabindex='-1']"));
-            var executor = (IJavaScriptExecutor)Browser.webDriver;
-            executor.ExecuteScript("arguments[0].click();", btnCurrentAge);
+            btnCurrentAge.Click();
         }
 
         public bool validateProjectionEnabled()
@@ -54,6 +38,39 @@ namespace WZNLFramework
             var profileOption = divRiskProfile.FindElement(By.CssSelector("input[ng-click='select()'][value='" + prfileOption + "']"));
             var executor = (IJavaScriptExecutor)Browser.webDriver;
             executor.ExecuteScript("arguments[0].click();", profileOption);
+        }
+
+        public void VoluntaryContribution(string voluntaryContribution, string frequency)
+        {
+            var divVoluntaryContributions = Browser.webDriver.FindElement(By.ClassName("wpnib-field-voluntary-contributions"));
+            var txtVoluntaryContributions= divVoluntaryContributions.FindElement(By.CssSelector("input[ng-model='displayModel']"));
+            //var frequencySelect = divVoluntaryContributions.FindElement(By.CssSelector("li[ng-click='select()'][value='" + frequency + "'"));
+            txtVoluntaryContributions.Clear();
+            txtVoluntaryContributions.SendKeys(voluntaryContribution);
+            txtVoluntaryContributions.SendKeys(Keys.Enter);
+            var freSelect = divVoluntaryContributions.FindElement(By.CssSelector("div[ng-click='toggle()']"));
+            var executor = (IJavaScriptExecutor)Browser.webDriver;
+            executor.ExecuteScript("arguments[0].click();", freSelect);
+            var frequencySelect = divVoluntaryContributions.FindElement(By.CssSelector("li[ng-click='select()'][value='" + frequency + "'"));
+            executor.ExecuteScript("arguments[0].click();", frequencySelect);
+        }
+
+        public void SavingsGoalPostRetirement(string savingsPostRetd)
+        {
+            var divSavingsPostRetd = Browser.webDriver.FindElement(By.ClassName("wpnib-field-savings-goal"));
+            var txtSavingsPostRetd = divSavingsPostRetd.FindElement(By.CssSelector("input[ng-model='displayModel']"));
+            txtSavingsPostRetd.Clear();
+            txtSavingsPostRetd.SendKeys(savingsPostRetd);
+            txtSavingsPostRetd.SendKeys(Keys.Enter);
+        }
+
+        public void EnterCurrentBalance(string balance)
+        {
+            var divCurrentBalance = Browser.webDriver.FindElement(By.ClassName("wpnib-field-kiwi-saver-balance"));
+            var txtCurrentBalance = divCurrentBalance.FindElement(By.CssSelector("input[ng-model='displayModel']"));
+            txtCurrentBalance.Clear();
+            txtCurrentBalance.SendKeys(balance);
+            txtCurrentBalance.SendKeys(Keys.Enter);
         }
 
         public void PrescribedInvestorRate(string investorRate)
@@ -126,7 +143,7 @@ namespace WZNLFramework
 
         }
 
-        public void SelectEmploymentStatus()
+        public void SelectEmploymentStatus(string employeeStatus)
         {
             wait = new WebDriverWait(Browser.webDriver, TimeSpan.FromSeconds(10));
             var selectControl = wait.Until(d =>
@@ -141,7 +158,7 @@ namespace WZNLFramework
             //select.SelectByText("Employed");
             var liEmployed = wait.Until(d =>
             {
-                return Browser.webDriver.FindElement(By.CssSelector("li[ng-click='select()'][value='employed'"));
+                return Browser.webDriver.FindElement(By.CssSelector("li[ng-click='select()'][value='"+employeeStatus+"'"));
             });
             executor.ExecuteScript("arguments[0].click();", liEmployed);
         }
