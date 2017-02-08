@@ -31,9 +31,10 @@ namespace WZNLFramework
 
         public void Goto()
         {
+            Browser.LaunchFirefox();
             Browser.Goto(url);
            
-
+            
         }
 
 
